@@ -1,0 +1,15 @@
+html {
+  &,
+  &.wf-loading {
+    visibility: hidden;
+  }
+}
+
+.wf-active {
+  visibility: visible;
+}
+
+.wf-inactive body {
+  font-family: sans-serif;
+  visibility: visible;
+}
