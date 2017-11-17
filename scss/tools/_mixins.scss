@@ -82,3 +82,27 @@
     top: 0;
   }
 }
+
+@mixin link-underline($color) {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+
+  &:hover::before {
+    transform: scaleX(1) translateX(-50%);
+  }
+
+  &::before {
+    background-color: $color;
+    bottom: 0;
+    content: '';
+    height: 1px;
+    left: 50%;
+    max-width: 100%;
+    position: absolute;
+    transform: scaleX(0) translateX(-50%);
+    transform-origin: -50% -50%;
+    transition: transform $transition-timing;
+    width: 100%;
+    }
+}

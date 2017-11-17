@@ -1,16 +1,17 @@
 /*!
-Theme Name: Blank Wordpress Theme
-Theme URI: https://github.com/DesignImage/blank-theme
-Author: Design Image
-Author URI: https://github.com/DesignImage
-Description: Blank theme by Design Image
+Theme Name: Nalu Creative
+Theme URI: https://github.com/keefyhub/nalu-creative
+Author: Keith Light
+Author URI: https://github.com/keefyhub
+Description: Nalu Creative theme by Keith Light
 Version: 1.0.0
 */
 
 @import 'settings/variables';
 
 @import 'globals/reset',
-        'globals/fout';
+        'globals/fout',
+        'globals/icons';
 
 @import 'tools/gridz',
         'tools/mixins';
@@ -20,4 +21,5 @@ Version: 1.0.0
 @import 'objects/wrappers',
         'objects/content-utilities';
 
-@import 'components/wysiwyg';
+@import 'components/landing-page',
+        'components/wysiwyg';

@@ -1,7 +1,7 @@
 {
-  "name": "blank-wordpress",
+  "name": "nalu-creative",
   "version": "1.0.0",
-  "description": "A blank wordpress install using GULP",
+  "description": "Nalu Creative Wordpress theme",
   "scripts": {
     "start": "wp server --host='0.0.0.0' --port='8000' --docroot='../../../'",
     "watch": "rm -rf public && gulp watch",
@@ -9,24 +9,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DesignImage/blank-theme.git"
+    "url": "git+https://github.com/keefyhub/nalu-creative"
   },
   "author": "Keith Light",
   "license": "WTFPL",
   "bugs": {
-    "url": "https://github.com/DesignImage/blank-theme/issues"
+    "url": "https://github.com/keefyhub/nalu-creative/issues"
   },
-  "homepage": "https://github.com/DesignImage/blank-theme#readme",
+  "homepage": "https://github.com/keefyhub/nalu-creative#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cache": "^0.3.0",
     "gulp-concat": "^2.6.0",
-    "gulp-imagemin": "^2.3.0",
+    "gulp-imagemin": "^3.3.0",
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.4.2",
     "reset-css": "^2.2.0",
     "sass-module-importer": "^1.2.1",
-    "wordpress-core-css": "github:DesignImage/wordpress-core-css"
+    "wordpress-core-css": "github:keefyhub/wordpress-core-css"
   }
 }
