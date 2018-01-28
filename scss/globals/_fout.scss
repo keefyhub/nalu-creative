@@ -1,15 +1,15 @@
 html {
-  &,
-  &.wf-loading {
-    visibility: hidden;
-  }
+    &,
+    &.wf-loading {
+        visibility: hidden;
+    }
 }
 
 .wf-active {
-  visibility: visible;
+    visibility: visible;
 }
 
 .wf-inactive body {
-  font-family: sans-serif;
-  visibility: visible;
+    font-family: sans-serif;
+    visibility: visible;
 }

@@ -1,30 +1,53 @@
 @import 'reset-css';
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 
-  &:focus {
-    outline: 0;
-  }
+    &:focus {
+        outline: 0;
+    }
 
-  img {
-    vertical-align: bottom;
-  }
+    img {
+        vertical-align: bottom;
+    }
 }
 
 img {
-  height: auto;
-  max-width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 input,
 select,
 textarea {
-  appearance: none;
-  border: 0;
-  border-radius: 0;
+    appearance: none;
+    border: 0;
+    border-radius: 0;
 
-  &:focus {
-    outline: 0;
-  }
+    &:focus {
+        outline: 0;
+    }
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+sub,
+sup {
+    font-size: .75em;
+    margin-left: 5px;
+}
+
+sub {
+    vertical-align: sub;
+}
+
+sup {
+    vertical-align: super;
 }

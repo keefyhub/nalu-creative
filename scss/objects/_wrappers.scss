@@ -1,9 +1,30 @@
-.container {
-  margin: 0 auto;
-  max-width: 1200px;
-  position: relative;
+%container-default {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $gutter-margin;
+    padding-right: $gutter-margin;
+    width: 100%;
+}
 
-  &--small {
-    max-width: 960px;
-  }
+// Site wrapper, allows animating/transforming everything if required
+.site-wrapper {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.container {
+    @extend %container-default;
+    max-width: 1440px;
+
+    &-medium {
+        @extend %container-default;
+        max-width: 1240px;
+    }
+
+    &-small {
+        @extend %container-default;
+        max-width: 700px;
+    }
 }

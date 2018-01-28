@@ -1,108 +1,304 @@
-@mixin vertical-center($position: relative) {
-  transform: translateY(-50%);
-  position: $position;
-  top: 50%;
+@mixin responsive-text($min, $max) {
+    $diff: $max - $min;
+
+    font-size: #{$max}px;
+    font-size: calc(#{$min}px + #{$diff} * (100vw - #{$minimum-viewport-width}px) / (#{$large-desktop-breakpoint} - #{$minimum-viewport-width}));
+
+    @include large-desktop {
+        font-size: #{$max}px;
+    }
 }
 
-@mixin vertical-reset($position: relative) {
-  transform: translateY(0);
-  top: 0;
-  position: $position;
+@mixin visually-hidden {
+    position: absolute;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    // scss-lint:disable DuplicateProperty
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+}
+
+@mixin hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0;
+    color: transparent;
+}
+
+@mixin vertical-center($position: relative) {
+    transform: translateY(-50%);
+    position: $position;
+    top: 50%;
 }
 
 @mixin horizontal-center($position: relative) {
-  transform: translateX(-50%);
-  left: 50%;
-  position: $position;
-}
-
-@mixin horizontal-reset($position: relative) {
-  transform: translateX(0);
-  left: 0;
-  position: $position;
+    transform: translateX(-50%);
+    left: 50%;
+    position: $position;
 }
 
 @mixin absolute-center($position: relative) {
-  transform: translate(-50%, -50%);
-  left: 50%;
-  position: $position;
-  top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    position: $position;
+    top: 50%;
 }
 
-@mixin absolute-reset($position: relative) {
-  transform: translate(0, 0);
-  left: 0;
-  position: $position;
-  top: 0;
-}
-
-@mixin font-size($size) {
-  font-size: ($size * 10) + px;
-  font-size: $size + rem;
-}
-
-@mixin font-styles-for($font) {
-  font: {
-    family: map-get($font, family);
-    style: map-get($font, style);
-    weight: map-get($font, weight);
-  }
+@mixin list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 @mixin background-cover {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-@mixin font-awesome-icon($unicode, $icon-size: false) {
-  content: unquote("\"\\#{$unicode}\"");
-  font-family: FontAwesome;
+@mixin centered-radial-gradient($color: $white, $amount: 20%) {
+    background: radial-gradient(circle, lighten($color, $amount) 10%, $color 90%);
+}
 
-  @if $icon-size {
-    @include font-size($icon-size);
-  }
+@mixin stripped-background($color: $_color-white) {
+    background: repeating-linear-gradient(45deg, darken($color, 10%), darken($color, 10%) 2px, $color 2px, $color 6px);
+}
+
+@mixin fade-to-gradient($direction, $color-1, $color-2) {
+    background: linear-gradient(to $direction, $color-1, $color-2);
+}
+
+@mixin font-icon($unicode, $icon-size: false) {
+    content: unquote("\"\\#{$unicode}\"");
+    font-family: 'icomoon';
+
+    @if $icon-size {
+        font-size: $icon-size;
+    }
 }
 
 @mixin aspect-ratio($width, $height) {
-  position: relative;
+    position: relative;
 
-  &::before {
-    content: '';
-    display: block;
-    padding-top: ($height / $width) * 100%;
-    width: 100%;
-  }
+    &::before {
+        content: '';
+        display: block;
+        padding-top: ($height / $width) * 100%;
+        width: 100%;
+    }
 
-  > * {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
+    > * {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 }
 
-@mixin link-underline($color) {
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
+@mixin where-am-i {
+    background: red;
+    border: 2px solid red;
+}
 
-  &:hover::before {
-    transform: scaleX(1) translateX(-50%);
-  }
+@mixin link-underline($color, $bottom: 0, $display: 'inline-block') {
+    display: $display;
+    position: relative;
+    text-decoration: none;
 
-  &::before {
-    background-color: $color;
-    bottom: 0;
-    content: '';
-    height: 1px;
-    left: 50%;
-    max-width: 100%;
-    position: absolute;
-    transform: scaleX(0) translateX(-50%);
-    transform-origin: -50% -50%;
-    transition: transform $transition-timing;
-    width: 100%;
+    &:hover::before {
+        transform: scaleX(1) translateX(-50%);
+    }
+
+    &::before {
+        background-color: $color;
+        bottom: $bottom;
+        content: '';
+        height: 1px;
+        left: 50%;
+        max-width: 100%;
+        position: absolute;
+        transform: scaleX(0) translateX(-50%);
+        transform-origin: -50% -50%;
+        transition: transform $default-transition-timing;
+        width: 100%;
+    }
+}
+
+@mixin ribbon-pseudo-element($content: '', $background-color: $ribbon-background-color, $color: $ribbon-color) {
+    &::before {
+        background-color: $background-color;
+        color: $color;
+        content: attr(#{$content});
+        display: block;
+        font-size: .6rem;
+        font-weight: 900;
+        padding: .5rem 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        text-transform: uppercase;
+        top: 0;
+        transform: translate(25%, 100%) rotate(45deg);
+        width: 10rem;
+        z-index: 10;
+    }
+}
+
+@mixin close-icon-pseudo-element($color, $height: 1rem, $left: 0, $top: 50%) {
+    &::before,
+    &::after {
+        background-color: $color;
+        content: '';
+        height: $height;
+        left: $left;
+        pointer-events: none;
+        position: absolute;
+        top: $top;
+        width: 1px;
+    }
+
+    &::before {
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::after {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+}
+
+@mixin colour-variations {
+    &--white {
+        background-color: $_color-white;
+    }
+
+    &--chicago {
+        background-color: $_color-chicago;
+    }
+
+    &--fiord {
+        background-color: $_color-fiord;
+    }
+
+    &--mine-shaft {
+        background-color: $_color-mine-shaft;
+    }
+
+    &--shadow {
+        background-color: $_color-shadow;
+    }
+
+    &--submarine {
+        background-color: $_color-submarine;
+    }
+}
+
+@mixin pattern-variations {
+    &--brick {
+        background-image: url('#{$image-path}/brick.png');
+        background-repeat: repeat;
+    }
+
+    &--herringbone {
+        background-image: url('#{$image-path}/herringbone.png');
+        background-repeat: repeat;
+    }
+
+    &--honeycomb {
+        background-image: url('#{$image-path}/honeycomb.png');
+        background-repeat: repeat;
+    }
+}
+
+@mixin image-overlay($color: $default-overlay-color) {
+    position: relative;
+
+    &::before {
+        @include absolute-center(absolute);
+        background-color: $color;
+        content: '';
+        height: 100%;
+        transition: opacity $default-transition-timing;
+        width: 100%;
+    }
+
+    > *  {
+        position: relative;
+        z-index: 10;
+    }
+}
+
+.u {
+    &-align-start {
+        align-items: flex-start;
+    }
+
+    &-align-stretch {
+        align-items: stretch;
+    }
+
+    &-align-center {
+        align-items: center;
+    }
+
+    &-align-end {
+        align-items: flex-end;
+    }
+
+    &-justify-center {
+        justify-content: center;
+    }
+
+    &-justify-end {
+        justify-content: flex-end;
+    }
+
+    &-space-between {
+        justify-content: space-between;
+    }
+
+    &-space-around {
+        justify-content: space-around;
+    }
+
+    &-text-center {
+        text-align: center;
+    }
+
+    &-text-right {
+        text-align: right;
+    }
+
+    &-text-uppercase {
+        text-transform: uppercase;
+    }
+
+    &-small-text {
+        font-size: .8rem;
+    }
+
+    &-where-am-i {
+        @include where-am-i;
+    }
+
+    &-visually-hidden {
+        @include visually-hidden;
+    }
+
+    &-hidden {
+        display: none;
+    }
+
+    &-hide-text {
+        @include hide-text;
+    }
+
+    &-negative-bottom {
+        margin-bottom: -2rem;
     }
 }

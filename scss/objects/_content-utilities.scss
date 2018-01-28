@@ -1,11 +1,30 @@
-.u-text-center {
-  text-align: center;
-}
+.page-content {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    position: relative;
+    width: 100%;
+    z-index: 2;
 
-.u-uppercase {
-  text-transform: uppercase;
-}
+    &--less-padding {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
 
-.u-page-content {
-  padding: 60px 0;
+    &--no-padding {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    &--top-padding {
+        padding-top: 4rem;
+    }
+
+    &--bottom-padding {
+        padding-bottom: 4rem;
+    }
+
+    &--min-height {
+        height: 20rem;
+        min-height: 30vw;
+    }
 }

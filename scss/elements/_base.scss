@@ -1,32 +1,64 @@
 * {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 
-  &,
-  &::before,
-  &::after {
-    box-sizing: border-box;
-  }
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
 
-  &::placeholder {
-    transition: color $transition-timing;
-  }
+    &::placeholder {
+        transition: color $default-transition-timing;
+    }
 
-  &:focus::placeholder {
-    color: transparent;
-  }
+    &:focus::placeholder {
+        color: transparent;
+    }
+
+    &::selection {
+        background: lighten($default-link-color, 30%);
+    }
+
+    &::-moz-selection {
+        background: lighten($default-link-color, 30%);
+    }
+
+    &:focus {
+        outline-color: lighten($default-link-color, 30%);
+        outline-offset: .2rem;
+        outline-width: .1rem;
+    }
 }
 
-html {
-  font-size: 62.5%;
+html,
+body {
+    // Set the font size at the html level, so rems are also responsive
+    @include responsive-text(14, 16);
+    color: $body-color;
+
+    // scss-lint:disable VendorPrefix DuplicateProperty
+    -moz-font-feature-settings: 'kern=1';
+    -moz-font-feature-settings: 'kern';
+    -webkit-font-feature-settings: 'kern';
+
+    font-feature-settings: 'kern';
+    font-kerning: normal;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-rendering: optimizeLegibility;
 }
 
 body {
-  @include font-size(2);
-  background-color: $body-background-color;
-  color: $body-color;
-  font-family: $body-font-stack;
-  line-height: 1.4;
+    background-color: $body-background-color;
+    color: $body-color;
+    font-family: $body-font-stack;
+    font-weight: 400;
+    line-height: 1.4;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
 }
 
 h1,
@@ -35,57 +67,18 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.2;
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.6;
 }
 
 h1,
 h2 {
-  @include font-size(5);
+    font-size: 2.875rem;
 }
 
 h3 {
-  @include font-size(3.5);
-}
-
-h4 {
-  @include font-size(3);
-}
-
-h5 {
-  @include font-size(2.4);
-}
-
-h6 {
-  @include font-size(2);
-}
-
-p {
-  line-height: 1.6;
-}
-
-b,
-strong {
-  font-weight: 700;
-}
-
-em {
-  font-style: italic;
-}
-
-a {
-  color: inherit;
-}
-
-sub,
-sup {
-  font-size: .75em;
-  margin-left: 5px;
-}
-
-sub {
-  vertical-align: sub;
-}
-
-sup {
-  vertical-align: super;
+    font-size: 1.75rem;
 }

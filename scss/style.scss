@@ -13,7 +13,8 @@ Version: 1.0.0
         'globals/fout',
         'globals/icons';
 
-@import 'tools/gridz',
+@import 'tools/media-queries',
+        'tools/gridz',
         'tools/mixins';
 
 @import 'elements/base';
@@ -21,5 +22,4 @@ Version: 1.0.0
 @import 'objects/wrappers',
         'objects/content-utilities';
 
-@import 'components/landing-page',
-        'components/wysiwyg';
+@import 'components/wysiwyg';

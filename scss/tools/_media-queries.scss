@@ -1,0 +1,132 @@
+// Breakpoint sizes ~ remember to change these in main.js too
+$minimum-viewport-width: 320;
+$mobile-breakpoint: 599;
+$phablet-breakpoint-lower: ($mobile-breakpoint + 1);
+$phablet-breakpoint: 729;
+$tablet-breakpoint-lower: ($mobile-breakpoint + 1);
+$tablet-breakpoint: 959;
+$desktop-breakpoint: ($tablet-breakpoint + 1);
+$large-desktop-breakpoint: 1100;
+
+// Used to limit width of content (non-full-screen sites)
+$max-width: "#{$large-desktop-breakpoint}px";
+
+// Media Queries
+//media query breaks
+$mobile: "only screen and (max-width: #{$mobile-breakpoint}px)" !default;
+$phablet: "only screen and (min-width: #{$phablet-breakpoint-lower}px) and (max-width: #{$phablet-breakpoint}px)" !default;
+$phablet-down: "only screen and (max-width: #{$phablet-breakpoint}px)" !default;
+$tablet: "only screen and (min-width: #{$tablet-breakpoint-lower}px) and (max-width: #{$tablet-breakpoint}px)" !default;
+$tablet-down: "only screen and (max-width: #{$tablet-breakpoint}px)" !default;
+$desktop: "only screen and (min-width: #{$desktop-breakpoint}px)" !default;
+$desktop-down: "only screen and (max-width: #{$large-desktop-breakpoint}px)" !default;
+$large-desktop: "only screen and (min-width: #{$large-desktop-breakpoint}px)" !default;
+
+$ipad-portrait: "only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait)" !default;
+
+// Any device without whitespace on the sides
+$full-screen: "only screen and (max-width: #{$large_desktop_breakpoint}px)" !default;
+
+@mixin retina() {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2 / 1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @media #{$mobile}{
+        @content;
+    }
+}
+
+@mixin phablet() {
+    @media #{$phablet}{
+        @content;
+    }
+}
+
+@mixin phablet-down() {
+    @media #{$phablet-down}{
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media #{$tablet}{
+        @content;
+    }
+}
+
+@mixin tablet-down() {
+    @media #{$tablet-down}{
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media #{$desktop}{
+        @content;
+    }
+}
+
+@mixin desktop-down() {
+    @media #{$desktop-down}{
+        @content;
+    }
+}
+
+@mixin large-desktop() {
+    @media #{$large-desktop}{
+        @content;
+    }
+}
+
+@mixin full-screen() {
+    @media #{$full-screen}{
+        @content;
+    }
+}
+
+@mixin ipad-portrait() {
+    @media #{$ipad-portrait}{
+        @content;
+    }
+}
+
+.desktop-only {
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
+}
+
+.tablet-only {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+}
+
+.mobile-only {
+    display: none;
+
+    @include mobile {
+        display: block;
+    }
+}
+
+.not-mobile {
+    @include mobile {
+        display: none;
+    }
+}
+
+
+
