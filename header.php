@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-  <head>
+<head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    <title><?php wp_title(); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <?php wp_head(); ?>
-  </head>
-  <body <?php body_class(); ?>>
+</head>
+<body <?php body_class('no-js'); ?>>
+<script>
+    document.getElementsByClassName('no-js')[0].classList.remove('no-js');
+</script>

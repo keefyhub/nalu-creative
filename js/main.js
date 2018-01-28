@@ -1,3 +1,3 @@
-(function($) {
-  console.log('loaded');
+(function ($) {
+    console.log('loaded');
 })(jQuery);

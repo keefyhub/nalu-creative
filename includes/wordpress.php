@@ -9,7 +9,6 @@ define('DISALLOW_FILE_EDIT', true);
 // Disable XML-RPC
 add_filter('xmlrpc_enabled', '__return_false');
 
-
 // Close comments on the front-end
 function disable_comments_status()
 {
