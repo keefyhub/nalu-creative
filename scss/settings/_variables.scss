@@ -4,7 +4,10 @@ $_standard-font-family: 'Montserrat', sans-serif;
 // Colours
 $_color-white: #fff;
 $_color-iron: #c7c9cb;
+$_color-mountain-mist: #959595;
 $_color-nero: #252525;
+$_color-cloud-burst: #333b4d;
+$_color-pelorous: #2ea6b1;
 $_color-fountain-blue: #4dc3c5;
 
 // Globals
@@ -25,6 +28,9 @@ $body-color: $_color-nero;
 // Defaults
 $default-link-color: $_color-fountain-blue;
 
-// Landing Page
-$landing-page-color: $_color-white;
-$landing-page-title-color: $_color-fountain-blue;
+// Page content
+$page-content-border-bottom-color: $_color-white;
+
+// Services
+$services-color-list: $_color-cloud-burst, $_color-pelorous, $_color-mountain-mist;
+$services-color: $_color-white;

@@ -1,4 +1,5 @@
 .page-content {
+    border-bottom: 1rem solid $page-content-border-bottom-color;
     padding-bottom: 4rem;
     padding-top: 4rem;
     position: relative;
@@ -28,25 +29,34 @@
         display: flex;
         min-height: 100vh;
     }
+}
 
-    .title {
-        font-weight: bold;
+.title {
+    font-weight: bold;
 
-        &--with-underline {
-            display: inline-block;
-            margin-bottom: 3rem;
-            position: relative;
+    &--with-underline {
+        display: inline-block;
+        margin-bottom: 3rem;
+        position: relative;
 
-            &::before {
-                @include horizontal-center(absolute);
-                background-color: $default-link-color;
-                bottom: -1rem;
-                content: '';
-                display: block;
-                height: .3rem;
-                max-width: 100%;
-                width: 20rem;
-            }
+        &::before {
+            background-color: $default-link-color;
+            bottom: -1rem;
+            content: '';
+            display: block;
+            height: .25rem;
+            left: 0;
+            max-width: 100%;
+            position: absolute;
+            width: 8rem;
+        }
+    }
+
+    &--centered-underline {
+        text-align: center;
+
+        &::before {
+            @include horizontal-center(absolute);
         }
     }
 }

@@ -48,7 +48,8 @@ $grid-gutter-width: 2rem;
 
     &--vertical-spacing {
         margin-top: -#{$grid-gutter-width};
-        [class^="col-"] {
+
+        [class*="col-"] {
             margin-top: #{$grid-gutter-width};
         }
     }

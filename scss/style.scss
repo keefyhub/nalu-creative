@@ -22,4 +22,5 @@ Version: 1.0.0
 @import 'objects/wrappers',
         'objects/content-utilities';
 
-@import 'components/wysiwyg';
+@import 'components/services',
+        'components/wysiwyg';

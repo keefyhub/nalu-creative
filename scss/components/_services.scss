@@ -1,0 +1,12 @@
+.services {
+    &__item {
+        color: $services-color;
+        padding: 7.5rem 3.75rem;
+    }
+}
+
+@for $i from 1 through length($services-color-list) {
+    .services__item:nth-of-type(#{length($services-color-list)}n + #{$i}) {
+        background-color: nth($services-color-list, $i);
+    }
+}
