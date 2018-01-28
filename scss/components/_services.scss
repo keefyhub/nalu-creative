@@ -3,6 +3,10 @@
         color: $services-color;
         padding: 7.5rem 3.75rem;
     }
+
+    .title--with-underline:before {
+        background-color: white;
+    }
 }
 
 @for $i from 1 through length($services-color-list) {

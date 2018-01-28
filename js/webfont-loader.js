@@ -1,6 +1,6 @@
 WebFontConfig = {
     google: {
-        families: ['Montserrat:400, 500, 700, 900']
+        families: ['Montserrat:400, 700']
     },
     timeout: 2000
 };

@@ -27,7 +27,7 @@
     &--min-height {
         align-items: center;
         display: flex;
-        min-height: 100vh;
+        min-height: 80vh;
     }
 }
 
@@ -58,5 +58,9 @@
         &::before {
             @include horizontal-center(absolute);
         }
+    }
+
+    strong {
+        font-weight: 900;
     }
 }
