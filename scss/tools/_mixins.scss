@@ -150,71 +150,6 @@
     }
 }
 
-@mixin close-icon-pseudo-element($color, $height: 1rem, $left: 0, $top: 50%) {
-    &::before,
-    &::after {
-        background-color: $color;
-        content: '';
-        height: $height;
-        left: $left;
-        pointer-events: none;
-        position: absolute;
-        top: $top;
-        width: 1px;
-    }
-
-    &::before {
-        transform: translateY(-50%) rotate(45deg);
-    }
-
-    &::after {
-        transform: translateY(-50%) rotate(-45deg);
-    }
-}
-
-@mixin colour-variations {
-    &--white {
-        background-color: $_color-white;
-    }
-
-    &--chicago {
-        background-color: $_color-chicago;
-    }
-
-    &--fiord {
-        background-color: $_color-fiord;
-    }
-
-    &--mine-shaft {
-        background-color: $_color-mine-shaft;
-    }
-
-    &--shadow {
-        background-color: $_color-shadow;
-    }
-
-    &--submarine {
-        background-color: $_color-submarine;
-    }
-}
-
-@mixin pattern-variations {
-    &--brick {
-        background-image: url('#{$image-path}/brick.png');
-        background-repeat: repeat;
-    }
-
-    &--herringbone {
-        background-image: url('#{$image-path}/herringbone.png');
-        background-repeat: repeat;
-    }
-
-    &--honeycomb {
-        background-image: url('#{$image-path}/honeycomb.png');
-        background-repeat: repeat;
-    }
-}
-
 @mixin image-overlay($color: $default-overlay-color) {
     position: relative;
 
@@ -227,7 +162,7 @@
         width: 100%;
     }
 
-    > *  {
+    > * {
         position: relative;
         z-index: 10;
     }
