@@ -24,7 +24,29 @@
     }
 
     &--min-height {
-        height: 20rem;
-        min-height: 30vw;
+        align-items: center;
+        display: flex;
+        min-height: 100vh;
+    }
+
+    .title {
+        font-weight: bold;
+
+        &--with-underline {
+            display: inline-block;
+            margin-bottom: 3rem;
+            position: relative;
+
+            &::before {
+                @include horizontal-center(absolute);
+                background-color: $default-link-color;
+                bottom: -1rem;
+                content: '';
+                display: block;
+                height: .3rem;
+                max-width: 100%;
+                width: 20rem;
+            }
+        }
     }
 }

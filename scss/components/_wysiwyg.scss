@@ -2,8 +2,8 @@
 
 .mce-content-body,
 .wysiwyg {
-    > *:not(:last-child) {
-        margin-bottom: 30px;
+    > *:not(:last-child):not(.title--with-underline) {
+        margin-bottom: 2rem;
     }
 
     a:not(.btn),
@@ -67,5 +67,5 @@
 }
 
 .mce-content-body {
-    margin: 15px;
+    margin: 1rem;
 }

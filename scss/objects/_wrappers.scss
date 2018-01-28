@@ -18,13 +18,13 @@
     @extend %container-default;
     max-width: 1440px;
 
-    &-medium {
+    &--medium {
         @extend %container-default;
         max-width: 1240px;
     }
 
-    &-small {
+    &--small {
         @extend %container-default;
-        max-width: 700px;
+        max-width: 1024px;
     }
 }

@@ -1,38 +1,24 @@
 <?php
 get_header();
-if(have_posts()):
-  while(have_posts()): the_post();
-  ?>
+if (have_posts()):
+    while (have_posts()): the_post();
+        ?>
 
-  <main class="landing-page">
-    <div class="landing-page__content">
-      <img src="<?= PUBLIC_FOLDER; ?>/images/nalu-creative-logo.png">
-      <h1 class="landing-page__content-title">Website coming Soon</h1>
-      <ul class="landing-page__list">
-        <li class="landing-page__list-item">
-          <a class="landing-page__list-link" href="tel:07584904655">T: 07584 904655</a>
-        </li>
-        <li class="landing-page__list-item">
-          <a class="landing-page__list-link" href="mailto:jessie@nalu-creative.co.uk">E: jessie@nalu-creative.co.uk</a>
-        </li>
-      </ul>
-      <ul class="landing-page__social">
-        <li class="landing-page__social-item">
-          <a class="landing-page__social-link icon-facebook" href="https://www.facebook.com/Nalu-Creative-1991146944496703/" target="_blank"></a>
-        </li>
-        <li class="landing-page__social-item">
-          <a class="landing-page__social-link icon-instagram" href="https://www.instagram.com/nalu_creative/?hl=en" target="_blank"></a>
-        </li>
-        <li class="landing-page__social-item">
-          <a class="landing-page__social-link icon-pinterest" href="https://www.pinterest.co.uk/nalucreative/pins/" target="_blank"></a>
-        </li>
-      </ul>
-    </div>
-  </main>
+        <section class="page-content page-content--min-height">
+            <div class="container container--medium">
+                <div class="wysiwyg u-text-center">
+                    <h1 class="title title--with-underline">ALOHA</h1>
+                    <p>My name is Jessie Herriott and I am Nalu Creative; a freelance Graphic Designer based in Waterlooville, Hampshire. I have six years experience in the design industry along with a BA (Hons) Degree in Graphic Design from Winchester School of Art.</p>
+                    <p>I have been lucky enough to have worked in some well established design studios and have gained great experience from working on many different projects, including; catalogue design, packaging, website design, and branding new and existing companies. I have had the opportunity of working on photo-shoots in London for catalogue projects and art directing a photo-shoot too.</p>
+                    <p>Using this experience and knowledge, I have decided to become a freelance graphic designer. So I will be able to offer my clients a one to one bespoke personal service, to help them achieve the vision they have for their company and branding.</p>
+                    <p>Nalu Creative is about great design helping your business to flourish.</p>
+                </div>
+            </div>
+        </section>
 
-  <?php
-  endwhile;
+        <?php
+    endwhile;
 else:
-  echo 'Sorry, no posts matched your criteria';
+    echo 'Sorry, no posts matched your criteria';
 endif;
 get_footer();
