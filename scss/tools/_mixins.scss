@@ -154,10 +154,12 @@
     position: relative;
 
     &::before {
-        @include absolute-center(absolute);
         background-color: $color;
         content: '';
         height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
         transition: opacity $default-transition-timing;
         width: 100%;
     }

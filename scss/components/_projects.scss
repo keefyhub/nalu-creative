@@ -1,0 +1,33 @@
+.projects {
+    @include aspect-ratio(16, 9);
+    @include background-cover;
+
+    &__item {
+        @include image-overlay($default-link-color);
+        align-items: center;
+        color: $projects-item-color;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        padding: 3.75rem;
+        position: relative;
+
+        &::before {
+            transition: opacity $default-transition-timing;
+            opacity: 0;
+        }
+
+        &:hover::before {
+            opacity: .8;
+        }
+
+        &-description {
+            font-size: .9rem;
+        }
+    }
+
+    .title--with-underline::before {
+        background-color: $projects-item-color;
+        bottom: -1.5rem;
+    }
+}

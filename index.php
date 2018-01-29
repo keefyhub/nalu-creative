@@ -46,6 +46,18 @@ if (have_posts()):
                 <h2 class="title title--with-underline"><strong>MULTI-DISCIPLINARY</strong> FREELANCE DESIGN AT AN <strong>AGENCY STANDARD</strong></h2>
             </article>
         </section>
+        <section class="projects page-content page-content--no-padding">
+            <div class="grid">
+                <?php for ($i = 0; $i < 6; $i++): ?>
+                    <article class="projects__item col-4" style="background-image: url('<?= PUBLIC_FOLDER; ?>/images/examples-of-work.jpg')">
+                        <h3 class="title title--with-underline title--centered-underline">GRAPHIC DESIGN</h3>
+                        <div class="projects__item-description wysiwyg u-text-center">
+                            <p>Brief description</p>
+                        </div>
+                    </article>
+                <?php endfor; ?>
+            </div>
+        </section>
 
         <?php
     endwhile;
