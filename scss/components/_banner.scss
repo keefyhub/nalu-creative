@@ -1,26 +1,10 @@
 .banner {
     @include background-cover;
     @include image-overlay;
-    align-items: flex-start;
     color: $banner-color;
     display: flex;
-    justify-content: flex-start;
-    min-height: 80vh;
+    min-height: 40rem;
     padding: 7.5rem 3.75rem;
-
-    &--bottom-left {
-        align-items: flex-end;
-        justify-content: flex-start;
-    }
-
-    &--top-right {
-        justify-content: flex-end;
-    }
-
-    &--bottom-right {
-        align-items: flex-end;
-        justify-content: flex-end;
-    }
 
     &__content {
         max-width: 40rem;

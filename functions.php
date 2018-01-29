@@ -13,9 +13,7 @@ if (!function_exists('theme_setup')) {
             'caption',
         ]);
 
-        register_nav_menus([
-            'main_menu' => 'Main Menu'
-        ]);
+        register_nav_menus();
     }
 }
 add_action('after_setup_theme', 'theme_setup');

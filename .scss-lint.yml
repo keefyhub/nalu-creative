@@ -1,0 +1,10 @@
+linters:
+  SelectorFormat:
+    convention: hyphenated_BEM
+
+  NestingDepth:
+    max_depth: 5
+
+  Indentation:
+      severity: warning
+      width: 4

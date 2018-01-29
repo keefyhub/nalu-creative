@@ -12,6 +12,7 @@
 *~
 
 # OS or Editor folders
+.idea/*
 ._*
 .cache
 .sass_cache

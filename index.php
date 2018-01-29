@@ -4,7 +4,7 @@ if (have_posts()):
     while (have_posts()): the_post();
         ?>
 
-        <section class="page-content page-content--min-height">
+        <section class="page-content page-content--min-height" id="about">
             <div class="container container--medium">
                 <article class="wysiwyg u-text-center">
                     <h1 class="title title--with-underline title--centered-underline">ALOHA</h1>
@@ -15,7 +15,7 @@ if (have_posts()):
                 </article>
             </div>
         </section>
-        <section class="services page-content page-content--no-padding">
+        <section class="services page-content page-content--no-padding" id="services">
             <div class="grid grid--vertical-spacing">
                 <?php for ($i = 0; $i < 3; $i++): ?>
                     <article class="services__item col-4">
@@ -41,7 +41,7 @@ if (have_posts()):
                 <?php endfor; ?>
             </div>
         </section>
-        <section class="banner banner--top-left page-content page-content--no-padding" style="background-image: url('<?= PUBLIC_FOLDER; ?>/images/banner-background-image.jpg')">
+        <section class="banner u-top-left page-content page-content--no-padding" style="background-image: url('<?= PUBLIC_FOLDER; ?>/images/banner-background-image.jpg')" id="contact">
             <article class="banner__content">
                 <h2 class="title title--with-underline"><strong>MULTI-DISCIPLINARY</strong> FREELANCE DESIGN AT AN <strong>AGENCY STANDARD</strong></h2>
             </article>

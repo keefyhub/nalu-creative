@@ -1,6 +1,7 @@
 @import 'reset-css';
 
 a {
+    color: $default-link-color;
     text-decoration: none;
 
     &:focus {
