@@ -5,6 +5,7 @@ $_standard-font-family: 'Montserrat', sans-serif;
 $_color-white: #fff;
 $_color-iron: #c7c9cb;
 $_color-mountain-mist: #959595;
+$_color-tuatara: #363636;
 $_color-nero: #252525;
 $_color-cloud-burst: #333b4d;
 $_color-pelorous: #2ea6b1;
@@ -28,6 +29,13 @@ $body-color: $_color-nero;
 // Defaults
 $default-link-color: $_color-fountain-blue;
 $default-overlay-color: rgba($_color-cloud-burst, .5);
+
+// Site header
+$sticky-menu-background-color: $_color-white;
+
+// Site footer
+$footer-background-color: $_color-tuatara;
+$footer-color: $_color-white;
 
 // Magnific Popup defaults
 $magnific-popup-background-color: $_color-nero;

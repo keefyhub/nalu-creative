@@ -23,7 +23,7 @@
             ]);
             ?>
 
-            <a class="company-logo" href="<?php echo site_url(); ?>">
+            <a class="company-logo" href="<?= site_url(); ?>">
                 <img alt="<?= get_bloginfo('name'); ?>" src="<?= PUBLIC_FOLDER; ?>/images/nalu-creative-logo.png">
             </a>
 

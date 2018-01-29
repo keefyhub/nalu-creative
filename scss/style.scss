@@ -11,8 +11,7 @@ Version: 1.0.0
 
 @import 'globals/reset',
         'globals/fout',
-        'globals/icons',
-        'globals/site-header';
+        'globals/icons';
 
 @import 'tools/media-queries',
         'tools/gridz',
@@ -24,7 +23,9 @@ Version: 1.0.0
         'objects/magnific-popup',
         'objects/content-utilities';
 
-@import 'components/banner',
+@import 'components/site-header',
+        'components/site-footer',
+        'components/banner',
         'components/projects',
         'components/services',
         'components/wysiwyg';

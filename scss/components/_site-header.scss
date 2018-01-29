@@ -3,13 +3,8 @@
     position: relative;
 }
 
-.site-wrapper {
-    padding-bottom: 30rem;
-    padding-top: 40rem;
-}
-
 .sticky-menu {
-    background-color: white;
+    background-color: $sticky-menu-background-color;
     display: flex;
     left: 0;
     justify-content: center;

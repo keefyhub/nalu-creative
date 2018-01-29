@@ -1,0 +1,41 @@
+.site-footer {
+    background-color: $footer-background-color;
+    color: $footer-color;
+    font-size: .8rem;
+    padding-bottom: 3.75rem;
+    padding-top: 3.75rem;
+    text-align: center;
+
+    .company-logo {
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+
+        &-item {
+            position: relative;
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+                position: relative;
+
+                &::before {
+                    @include vertical-center(absolute);
+                    background-color: $footer-color;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    right: -.5rem;
+                    width: 1px;
+                }
+            }
+
+            a {
+                @include link-underline($default-link-color);
+            }
+        }
+    }
+}
