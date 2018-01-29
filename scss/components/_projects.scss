@@ -20,6 +20,7 @@
         &:hover {
             .projects__item-content {
                 opacity: 1;
+                transform: scale(1);
             }
 
             &::before {
@@ -29,7 +30,8 @@
 
         &-content {
             opacity: 0;
-            transition: opacity $default-transition-timing;
+            transform: scale(.8);
+            transition: opacity $default-transition-timing, transform $default-transition-timing;
         }
 
         &-description {
