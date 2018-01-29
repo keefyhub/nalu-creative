@@ -170,6 +170,28 @@
     }
 }
 
+@mixin close-icon-pseudo-element($color, $height: 1rem, $left: 0, $top: 50%) {
+    &::before,
+    &::after {
+        background-color: $color;
+        content: '';
+        height: $height;
+        left: $left;
+        pointer-events: none;
+        position: absolute;
+        top: $top;
+        width: 1px;
+    }
+
+    &::before {
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::after {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+}
+
 .u {
     &-align-start {
         align-items: flex-start;

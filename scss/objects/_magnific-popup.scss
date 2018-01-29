@@ -1,0 +1,92 @@
+@import 'magnific-popup/dist/magnific-popup.css';
+
+.mfp-bg {
+    background-color: $magnific-popup-background-color;
+}
+
+.mfp-container {
+    @include absolute-center(absolute);
+    max-width: calc(100% - 4rem);
+    padding: 3.75rem;
+}
+
+.mfp-figure::after {
+    display: none;
+}
+
+.mfp-content {
+    background-color: $magnific-popup-content-background-color;
+    max-width: 60rem;
+    padding: 1rem;
+
+    .mfp-img img {
+        width: 100%;
+    }
+
+    .mfp-content {
+        padding: 4rem;
+        text-align: center;
+    }
+}
+
+.mfp-gallery {
+    .mfp-close {
+        @include close-icon-pseudo-element($magnific-popup-content-background-color, 1rem, 50%);
+        border: 1px solid $magnific-popup-content-background-color;
+        font-size: 0;
+        height: 1.4rem;
+        left: -2rem;
+        top: 0;
+        transition: opacity $default-transition-timing;
+        width: 1.4rem;
+
+        &:active {
+            top: 0;
+        }
+    }
+
+    .mfp-arrow {
+        height: 100%;
+        margin: 0;
+        transition: opacity $default-transition-timing;
+        width: 2rem;
+        will-change: opacity;
+
+        &::before {
+            margin: 0;
+            border: 0;
+
+            background: transparent;
+            border-right: .2rem solid $magnific-popup-content-background-color;
+            border-top: .2rem solid $magnific-popup-content-background-color;
+            content: '';
+            height: 2rem;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0) rotate(-135deg);
+            transition: opacity $default-transition-timing;
+            width: 2rem;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        &:active {
+            margin: 0;
+        }
+
+        &-left {
+            left: 4rem;
+        }
+
+        &-right {
+            right: 4rem;
+
+            &::before {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+    }
+}

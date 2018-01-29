@@ -12,6 +12,7 @@ var gulp = require('gulp'),
             './scss/style.scss'
         ],
         input_js: [
+            './node_modules/magnific-popup/dist/jquery.magnific-popup.js',
             './js/*.js'
         ],
         input_images: './images/**/*',

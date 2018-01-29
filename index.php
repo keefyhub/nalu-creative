@@ -41,18 +41,25 @@ if (have_posts()):
                 <?php endfor; ?>
             </div>
         </section>
-        <section class="banner u-top-left page-content page-content--no-padding" style="background-image: url('<?= PUBLIC_FOLDER; ?>/images/banner-background-image.jpg')" id="contact">
+        <section class="banner u-top-left page-content page-content--no-padding" style="background-image: url('<?= PUBLIC_FOLDER; ?>/images/banner-background-image.jpg')">
             <article class="banner__content">
                 <h2 class="title title--with-underline"><strong>MULTI-DISCIPLINARY</strong> FREELANCE DESIGN AT AN <strong>AGENCY STANDARD</strong></h2>
             </article>
         </section>
-        <section class="projects page-content page-content--no-padding">
-            <div class="grid">
+        <section class="projects page-content page-content--no-padding" id="work">
+            <div class="grid js-gallery-popup">
                 <?php for ($i = 0; $i < 6; $i++): ?>
-                    <article class="projects__item col-4" style="background-image: url('<?= PUBLIC_FOLDER; ?>/images/examples-of-work.jpg')">
-                        <h3 class="title title--with-underline title--centered-underline">GRAPHIC DESIGN</h3>
-                        <div class="projects__item-description wysiwyg u-text-center">
-                            <p>Brief description</p>
+                    <article class="projects__item col-4 js-gallery-popup-item" style="background-image: url('<?= PUBLIC_FOLDER; ?>/images/examples-of-work.jpg')" data-image="<?= PUBLIC_FOLDER; ?>/images/examples-of-work.jpg">
+                        <div class="projects__item-content">
+                            <h3 class="title title--with-underline title--centered-underline">GRAPHIC DESIGN</h3>
+                            <div class="projects__item-description wysiwyg u-text-center">
+                                <p>Brief description</p>
+                            </div>
+                        </div>
+                        <div class="js-mfp-content mfp-hide">
+                            <h2 class="title u-text-uppercase">Nicola Jane <?= $i; ?></h2>
+                            <h3 class="title title--with-underline title--centered-underline u-text-uppercase">Catalogue</h3>
+                            <p>Nicola Jane is a mastectomy fashion company, who bring out a mail order catalogue yearly showcasing new and classic products. The customer liked their catalogue to look fresh and different from the previous year. The brief included cover design, art working text and imagery, photo editing and print management too. The project involved art-directing a two day photo-shoot in London, the content was carefully planned in advanced using mood boards.</p>
                         </div>
                     </article>
                 <?php endfor; ?>
