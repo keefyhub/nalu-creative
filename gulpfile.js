@@ -16,9 +16,11 @@ var gulp = require('gulp'),
             './js/*.js'
         ],
         input_images: './images/**/*',
+        input_video: './videos/**/*',
         output_css: './',
         output_js: './public/js',
-        output_images: './public/images'
+        output_images: './public/images',
+        output_video: './public/videos'
     };
 
 gulp.task('test', function () {
@@ -65,11 +67,16 @@ gulp.task('images', function () {
         .pipe(gulp.dest(paths.output_images));
 });
 
-gulp.task('watch', ['scripts', 'sass', 'images'], function () {
+gulp.task('videos', function () {
+    gulp.src(paths.input_video)
+        .pipe(gulp.dest(paths.output_video));
+});
+
+gulp.task('watch', ['scripts', 'sass', 'images', 'videos'], function () {
     livereload.listen();
     gulp.watch('./js/**/*', ['scripts']);
     gulp.watch('./scss/**/*', ['sass']);
     gulp.watch('./images/**', ['images']);
 });
 
-gulp.task('default', ['scripts', 'sass', 'images']);
+gulp.task('default', ['scripts', 'sass', 'images', 'videos']);
