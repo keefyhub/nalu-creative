@@ -7,7 +7,7 @@
     }
 
     a:not(.btn):not(.social__link) {
-        @include link-underline($body-color);
+        @include link-underline($default-link-color);
     }
 
     ol li,
