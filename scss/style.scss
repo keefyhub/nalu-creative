@@ -11,7 +11,8 @@ Version: 1.0.0
 
 @import 'globals/reset',
         'globals/fout',
-        'globals/icons';
+        'globals/icons',
+        'globals/buttons';
 
 @import 'tools/media-queries',
         'tools/gridz',
@@ -26,6 +27,7 @@ Version: 1.0.0
 @import 'components/site-header',
         'components/site-footer',
         'components/banner',
+        'components/contact-form',
         'components/projects',
         'components/services',
         'components/wysiwyg';

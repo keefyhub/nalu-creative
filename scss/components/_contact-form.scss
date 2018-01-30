@@ -1,0 +1,75 @@
+.wpcf7-form {
+    font-size: .9rem;
+
+    &.sent {
+        display: none;
+    }
+
+    // Hides text until sent
+    // Element is moved outside of the form by JS
+    .wpcf7-display-none {
+        display: none !important;
+    }
+
+    .form {
+        &__label {
+            display: none;
+        }
+
+        &__submit {
+            position: relative;
+            text-align: center;
+
+            .wpcf7-submit {
+                @extend .button;
+            }
+        }
+    }
+
+    .wpcf7-form-control-wrap {
+        width: 100%;
+    }
+
+    input:not([type="submit"]),
+    textarea {
+        background-color: $form-background-color;
+        border: 2px solid $default-link-color;
+        font: inherit;
+        font-weight: 400;
+        height: 3rem;
+        line-height: 3rem;
+        padding: 0 1rem;
+        text-align: center;
+        width: 100%;
+
+        &:focus {
+            border-color: darken($default-link-color, 10%);
+        }
+
+        &.wpcf7-not-valid {
+            border-color: red;
+        }
+    }
+
+    textarea {
+        display: block;
+        height: 15rem;
+        padding: 0 1rem;
+        resize: vertical;
+    }
+
+    .wpcf7-not-valid-tip {
+        display: none;
+    }
+}
+
+.screen-reader-response {
+    display: none;
+}
+
+.wpcf7-response-output {
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}

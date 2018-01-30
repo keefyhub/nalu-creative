@@ -1,14 +1,14 @@
 .page-content {
     border-bottom: 1.5rem solid $page-content-border-bottom-color;
-    padding-bottom: 4rem;
-    padding-top: 4rem;
+    padding-bottom: 8rem;
+    padding-top: 8rem;
     position: relative;
     width: 100%;
     z-index: 2;
 
     &--less-padding {
-        padding-bottom: 2rem;
-        padding-top: 2rem;
+        padding-bottom: 4rem;
+        padding-top: 4rem;
     }
 
     &--no-padding {
@@ -17,17 +17,38 @@
     }
 
     &--top-padding {
-        padding-top: 4rem;
+        padding-top: 8rem;
     }
 
     &--bottom-padding {
-        padding-bottom: 4rem;
+        padding-bottom: 8rem;
     }
 
     &--min-height {
         align-items: center;
         display: flex;
         min-height: 80vh;
+    }
+
+    &--fountain-blue {
+        background-color: $_color-fountain-blue;
+
+        .title--with-underline::before {
+            background-color: $_color-white;
+        }
+
+        .wpcf7-form .form__submit .wpcf7-submit {
+            @extend .button--light;
+        }
+    }
+}
+
+.inner-content {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 

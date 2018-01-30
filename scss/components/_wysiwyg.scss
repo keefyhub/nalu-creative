@@ -64,6 +64,10 @@
             width: 100%;
         }
     }
+
+    .wpcf7:not(:first-child) {
+        margin-top: 4rem;
+    }
 }
 
 .mce-content-body {

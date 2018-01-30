@@ -55,6 +55,7 @@ function include_additional_files()
     $template_url = get_template_directory();
 
     require_once $template_url . '/includes/acf-options.php';
+    require_once $template_url . '/includes/contact-form.php';
     require_once $template_url . '/includes/wordpress.php';
 }
 

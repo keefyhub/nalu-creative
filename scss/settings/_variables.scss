@@ -24,11 +24,18 @@ $ribbon-color: $_color-white;
 // Base
 $body-font-stack: $_standard-font-family;
 $body-background-color: $_color-white;
-$body-color: $_color-nero;
+$body-color: $_color-cloud-burst;
 
 // Defaults
 $default-link-color: $_color-fountain-blue;
 $default-overlay-color: rgba($_color-cloud-burst, .5);
+
+// Buttons
+$button-default-color: $_color-fountain-blue;
+$button-light-color: $_color-white;
+
+// Forms
+$form-background-color: $_color-white;
 
 // Site header
 $sticky-menu-background-color: $_color-white;

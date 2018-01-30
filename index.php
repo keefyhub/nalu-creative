@@ -65,6 +65,23 @@ if (have_posts()):
                 <?php endfor; ?>
             </div>
         </section>
+        <section class="contact page-content page-content--fountain-blue" id="contact">
+            <div class="container container--small">
+                <article class="wysiwyg u-text-center">
+                    <h1 class="title title--with-underline title--centered-underline">LET'S TALK</h1>
+                    <?= do_shortcode('[contact-form-7 id="9" title="Contact form 1" html_class="grid grid--with-gutter grid--vertical-spacing"]'); ?>
+                </article>
+            </div>
+            <div class="container container--medium">
+                <div class="grid grid--with-gutter grid--vertical-spacing inner-content">
+                    <?php for ($i = 0; $i < 3; $i++): ?>
+                        <article class="col-4">
+                            ITEM
+                        </article>
+                    <?php endfor; ?>
+                </div>
+            </div>
+        </section>
 
         <?php
     endwhile;
