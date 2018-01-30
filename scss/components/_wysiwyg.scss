@@ -6,22 +6,8 @@
         margin-bottom: 2rem;
     }
 
-    a:not(.btn),
-    .underline {
-        border-bottom: 1px solid $body-color;
-        display: inline-block;
-        line-height: 1;
-    }
-
-    a:not(.btn) {
-        border-bottom-color: $default-link-color;
-        color: $default-link-color;
-        text-decoration: none;
-        transition: opacity $default-transition-timing;
-
-        &:hover {
-            opacity: .7;
-        }
+    a:not(.btn):not(.social__link) {
+        @include link-underline($body-color);
     }
 
     ol li,

@@ -1,0 +1,19 @@
+.social {
+    @include list-reset;
+    display: flex;
+    justify-content: center;
+    margin-left: -1rem;
+
+    &__item {
+        margin-left: 1rem;
+    }
+
+    &__link {
+        display: block;
+        transition: transform $default-transition-timing;
+
+        &:hover {
+            transform: translateY(-.4rem);
+        }
+    }
+}

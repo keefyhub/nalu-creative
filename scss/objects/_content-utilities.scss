@@ -40,6 +40,15 @@
         .wpcf7-form .form__submit .wpcf7-submit {
             @extend .button--light;
         }
+
+        .wysiwyg a:not(.btn):not(.social__link) {
+            @include link-underline($_color-white);
+            color: $_color-white;
+        }
+
+        .social__link {
+            color: $_color-white;
+        }
     }
 }
 

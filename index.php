@@ -66,19 +66,39 @@ if (have_posts()):
             </div>
         </section>
         <section class="contact page-content page-content--fountain-blue" id="contact">
-            <div class="container container--small">
+            <div class="contact__form container container--small">
                 <article class="wysiwyg u-text-center">
                     <h1 class="title title--with-underline title--centered-underline">LET'S TALK</h1>
                     <?= do_shortcode('[contact-form-7 id="9" title="Contact form 1" html_class="grid grid--with-gutter grid--vertical-spacing"]'); ?>
                 </article>
             </div>
-            <div class="container container--medium">
-                <div class="grid grid--with-gutter grid--vertical-spacing inner-content">
-                    <?php for ($i = 0; $i < 3; $i++): ?>
-                        <article class="col-4">
-                            ITEM
-                        </article>
-                    <?php endfor; ?>
+            <div class="contact__links container container--medium">
+                <div class="grid grid--with-gutter grid--vertical-spacing inner-content u-text-center wysiwyg">
+                    <article class="col-4">
+                        <h3 class="title title--with-underline title--centered-underline">CALL</h3>
+                        <a href="#">07584 904655</a>
+                    </article>
+                    <article class="col-4">
+                        <h3 class="title title--with-underline title--centered-underline">EMAIL</h3>
+                        <a href="#">jessie@nalu-creative.co.uk</a>
+                    </article>
+                    <article class="col-4">
+                        <h3 class="title title--with-underline title--centered-underline">FOLLOW</h3>
+                        <ul class="social no-list-formatting">
+                            <li class="social__item">
+                                <a class="social__link icon-facebook"
+                                   href="https://www.facebook.com/Nalu-Creative-1991146944496703/" target="_blank"></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link icon-instagram"
+                                   href="https://www.instagram.com/nalu_creative/?hl=en" target="_blank"></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link icon-pinterest"
+                                   href="https://www.pinterest.co.uk/nalucreative/pins/" target="_blank"></a>
+                            </li>
+                        </ul>
+                    </article>
                 </div>
             </div>
         </section>
