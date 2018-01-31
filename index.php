@@ -4,15 +4,6 @@ if (have_posts()):
     while (have_posts()): the_post();
         ?>
 
-        <section class="hero-banner" style="background-image: url('<?= PUBLIC_FOLDER; ?>/images/hero-banner.jpg')">
-            <video autoplay class="hero-banner__video" loop muted preload="auto">
-                <source src="<?= PUBLIC_FOLDER; ?>/videos/banner.mov">
-                <source src="<?= PUBLIC_FOLDER; ?>/videos/banner.mp4">
-            </video>
-            <div class="hero-banner__content">
-                <img src="<?= PUBLIC_FOLDER; ?>/images/nalu-creative-large-logo.png">
-            </div>
-        </section>
         <section class="page-content page-content--min-height" id="about">
             <div class="container container--medium">
                 <article class="wysiwyg u-text-center">
