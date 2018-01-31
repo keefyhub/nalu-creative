@@ -1,6 +1,10 @@
 .site-header {
     height: 5.5rem;
     position: relative;
+
+    &--mobile {
+        display: none;
+    }
 }
 
 .sticky-menu {

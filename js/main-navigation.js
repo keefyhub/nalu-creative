@@ -39,12 +39,18 @@
 
     $(window).on('scroll', function () {
         var windowPosition = $(window).scrollTop(),
-            windowTarget = $('.site-header').offset().top;
+            windowTarget = $('.site-header:not(.site-header--mobile)').offset().top;
 
         if (windowPosition > windowTarget) {
             $('.sticky-menu').addClass('sticky-menu--fixed');
         } else {
             $('.sticky-menu').removeClass('sticky-menu--fixed');
         }
+    });
+
+    $('.js-navigation-toggle').on('click', function (e) {
+        e.preventDefault();
+
+        $('.js-navigation-target').toggleClass('site-header--open');
     });
 })(jQuery);

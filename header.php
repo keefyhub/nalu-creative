@@ -12,6 +12,33 @@
     document.getElementsByClassName('no-js')[0].classList.remove('no-js');
 </script>
     <main class="site-wrapper">
+        <section class="site-header site-header--mobile js-navigation-target"">
+            <a class="company-logo" href="<?php echo site_url(); ?>">
+                <img alt="<?= get_bloginfo('name'); ?>" src="<?= PUBLIC_FOLDER; ?>/images/nalu-creative-logo.png">
+            </a>
+            <a class="navigation-toggle js-navigation-toggle" href="#">
+                <span class="navigation-toggle__text">Menu</span>
+                <span class="navigation-toggle__bars"></span>
+            </a>
+            <nav class="sticky-menu">
+                <ul class="main-navigation">
+                    <?php
+                    wp_nav_menu([
+                        'menu' => 'Main Menu Left',
+                        'menu_id' => 'main_menu_left',
+                        'container' => false,
+                        'items_wrap' => '%3$s'
+                    ]);
+                    wp_nav_menu([
+                        'menu' => 'Main Menu Right',
+                        'menu_id' => 'main_menu_right',
+                        'container' => false,
+                        'items_wrap' => '%3$s'
+                    ]);
+                    ?>
+                </ul>
+            </nav>
+        </section>
         <section class="hero-banner" style="background-image: url('<?= PUBLIC_FOLDER; ?>/images/hero-banner.jpg')">
             <video autoplay class="hero-banner__video" loop muted preload="auto">
                 <source src="<?= PUBLIC_FOLDER; ?>/videos/banner.mov">
