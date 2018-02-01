@@ -6,6 +6,7 @@
         &--mobile {
             align-items: center;
             background-color: $responsive-site-header-background-color;
+            box-shadow: $sticky-menu-box-shadow;
             display: flex;
             height: auto;
             left: 0;
@@ -21,6 +22,7 @@
                 display: block;
                 color: $responsive-sticky-menu-color;
                 height: 100vh;
+                font-size: 1.6rem;
                 left: initial;
                 max-height: 100vh;
                 opacity: 0;

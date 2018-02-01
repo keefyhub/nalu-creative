@@ -1,9 +1,9 @@
 (function ($) {
     var lastId,
-        topMenu = $('.main-navigation'),
+        topMenu = $('.site-header'),
         topMenuHeight = topMenu.outerHeight() + 1,
 
-        menuItems = topMenu.find('a'),
+        menuItems = topMenu.find('.main-navigation a'),
 
         scrollItems = menuItems.map(function () {
             var item = $($(this).attr('href'));
@@ -20,6 +20,10 @@
             scrollTop: offsetTop
         }, 850);
         e.preventDefault();
+
+        if ($('.site-header').hasClass('site-header--open')) {
+            $('.js-navigation-toggle').trigger('click');
+        }
     });
 
     $(window).on('scroll', function () {
