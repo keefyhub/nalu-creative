@@ -5,11 +5,11 @@
 
         galleryItem.each(function () {
             var src = $(this).attr('data-image'),
-                content = $(this).find('.js-mfp-content').html();
+                description = $(this).find('.js-mfp-description').html();
 
             galleryItems.push({
                 img: '<img src=' + src + ' >',
-                content: content
+                description: description
             });
         });
 
@@ -24,7 +24,7 @@
                 '<div class="mfp-figure">' +
                 '<div class="mfp-close"></div>' +
                 '<div class="mfp-img"></div>' +
-                '<div class="mfp-content wysiwyg"></div>' +
+                '<div class="mfp-description wysiwyg"></div>' +
                 '</div>'
             },
             callbacks: {

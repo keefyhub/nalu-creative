@@ -1,0 +1,28 @@
+@media only screen and (max-width: 1024px) {
+    .projects .projects__item {
+        padding: 2rem;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .projects .projects__item {
+        min-height: 30rem;
+        width: 100%;
+
+        &::before {
+            opacity: .8;
+        }
+
+        &-content {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+@media only screen and (max-width: 678px) {
+    .projects .projects__item {
+        min-height: 20rem;
+    }
+}

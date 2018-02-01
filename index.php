@@ -4,6 +4,7 @@ if (have_posts()):
     while (have_posts()): the_post();
         ?>
 
+
         <section class="page-content page-content--min-height" id="about">
             <div class="container container--medium">
                 <article class="wysiwyg u-text-center">
@@ -56,7 +57,7 @@ if (have_posts()):
                                 <p>Brief description</p>
                             </div>
                         </div>
-                        <div class="js-mfp-content mfp-hide">
+                        <div class="js-mfp-description mfp-hide">
                             <h2 class="title u-text-uppercase">Nicola Jane <?= $i; ?></h2>
                             <h3 class="title title--with-underline title--centered-underline u-text-uppercase">Catalogue</h3>
                             <p>Nicola Jane is a mastectomy fashion company, who bring out a mail order catalogue yearly showcasing new and classic products. The customer liked their catalogue to look fresh and different from the previous year. The brief included cover design, art working text and imagery, photo editing and print management too. The project involved art-directing a two day photo-shoot in London, the content was carefully planned in advanced using mood boards.</p>

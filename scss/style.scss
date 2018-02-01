@@ -35,8 +35,13 @@ Version: 1.0.0
         'components/wysiwyg';
 
 @import 'objects/mediaqueries/wrappers-mediaqueries',
+        'objects/mediaqueries/magnific-popup-mediaqueries',
         'objects/mediaqueries/content-utilities-mediaqueries';
 
+@import 'elements/mediaqueries/base-mediaqueries';
+
 @import 'components/mediaqueries/site-header-mediaqueries',
+        'components/mediaqueries/banner-mediaqueries',
         'components/mediaqueries/hero-banner-mediaqueries',
+        'components/mediaqueries/projects-mediaqueries',
         'components/mediaqueries/services-mediaqueries';
