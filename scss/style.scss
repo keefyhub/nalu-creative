@@ -34,7 +34,8 @@ Version: 1.0.0
         'components/social',
         'components/wysiwyg';
 
-@import 'objects/mediaqueries/wrappers-mediaqueries';
+@import 'objects/mediaqueries/wrappers-mediaqueries',
+        'objects/mediaqueries/content-utilities-mediaqueries';
 
 @import 'components/mediaqueries/site-header-mediaqueries',
         'components/mediaqueries/hero-banner-mediaqueries';

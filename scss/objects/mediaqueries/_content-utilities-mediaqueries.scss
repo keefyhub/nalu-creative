@@ -1,0 +1,54 @@
+@media only screen and (max-width: 1024px) {
+    .page-content {
+        border-bottom-width: 1rem;
+
+        &:not(&--no-padding) {
+            padding-bottom: 4rem;
+            padding-top: 4rem;
+        }
+
+        &--less-padding {
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+        }
+
+        &--top-padding {
+            padding-top: 4rem;
+        }
+
+        &--bottom-padding {
+            padding-bottom: 4rem;
+        }
+    }
+
+    .inner-content {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .page-content {
+        &:not(&--no-padding) {
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+        }
+
+        &--less-padding {
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+        &--top-padding {
+            padding-top: 2rem;
+        }
+
+        &--bottom-padding {
+            padding-bottom: 2rem;
+        }
+    }
+}
