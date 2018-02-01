@@ -1,7 +1,5 @@
 @media only screen and (max-width: 1024px) {
     .page-content {
-        border-bottom-width: 1rem;
-
         &:not(&--no-padding) {
             padding-bottom: 4rem;
             padding-top: 4rem;
@@ -50,5 +48,9 @@
         &--bottom-padding {
             padding-bottom: 2rem;
         }
+    }
+
+    .title--with-underline::before {
+        height: .1rem;
     }
 }
