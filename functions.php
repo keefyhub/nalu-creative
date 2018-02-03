@@ -1,4 +1,7 @@
 <?php
+// Disable the file editor
+define('DISALLOW_FILE_EDIT', true);
+
 define('PUBLIC_FOLDER', get_template_directory_uri() . '/public');
 
 if (!function_exists('theme_setup')) {
@@ -57,6 +60,7 @@ function include_additional_files()
     require_once $template_url . '/includes/acf-options.php';
     require_once $template_url . '/includes/contact-form.php';
     require_once $template_url . '/includes/wordpress.php';
+    require_once $template_url . '/includes/tinymce/editor-customisation.php';
 }
 
 add_action('init', 'include_additional_files', 1);

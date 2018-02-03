@@ -1,0 +1,36 @@
+[class*="mce-i-add_"]::before {
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: normal 16px/1 'dashicons';
+    vertical-align: top;
+}
+
+.mce-i-add_top_margin::before {
+    content: '\f342';
+
+}
+
+.mce-i-add_bottom_margin::before {
+    content: '\f346';
+
+}
+
+.mce-i-add_left_margin::before {
+    content: '\f340';
+
+}
+
+.mce-i-add_right_margin::before {
+    content: '\f344';
+
+}
+
+.mce-i-add_larger_text::before {
+    content: '\f343';
+
+}
+
+.mce-i-add_smaller_text::before {
+    content: '\f347';
+
+}

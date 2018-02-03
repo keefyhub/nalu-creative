@@ -1,8 +1,4 @@
 <?php
-// Disable WP Post Revisions
-define('AUTOSAVE_INTERVAL', 3600);
-define('WP_POST_REVISIONS', 3);
-
 // Disable the file editor
 define('DISALLOW_FILE_EDIT', true);
 
@@ -64,3 +60,7 @@ function disable_comments_admin_bar()
 }
 
 add_action('init', 'disable_comments_admin_bar');
+
+// Image sizes
+add_image_size('rectangle', 900, 600, true);
+add_image_size('square', 400, 400, true);

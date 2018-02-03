@@ -9,7 +9,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     paths = {
         input_scss: [
-            './scss/style.scss'
+            './scss/style.scss',
+            './scss/editor-style.scss'
         ],
         input_js: [
             './node_modules/magnific-popup/dist/jquery.magnific-popup.js',
