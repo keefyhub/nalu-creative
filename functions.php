@@ -2,6 +2,17 @@
 // Disable the file editor
 define('DISALLOW_FILE_EDIT', true);
 
+// Disable XMLRPC
+add_filter('xmlrpc_enabled', '__return_false');
+
+// Disable REST API
+function disable_rest_api()
+{
+    return new WP_Error('rest_disabled', __('The REST API on this site has been disabled.'), ['status' => rest_authorization_required_code()]);
+}
+
++add_filter('rest_authentication_errors', 'disable_rest_api');
+
 define('PUBLIC_FOLDER', get_template_directory_uri() . '/public');
 
 if (!function_exists('theme_setup')) {
