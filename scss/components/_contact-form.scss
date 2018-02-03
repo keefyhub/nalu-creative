@@ -53,7 +53,7 @@
     textarea {
         display: block;
         height: 15rem;
-        padding: 0 1rem;
+        padding: 1rem;
         resize: vertical;
     }
 
@@ -71,4 +71,8 @@
     padding: 20px;
     text-align: center;
     width: 100%;
+}
+
+.contact__links {
+    font-size: 1.4rem;
 }
