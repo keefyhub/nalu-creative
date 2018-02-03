@@ -78,6 +78,7 @@ function remove_columns_from_admin($columns)
 {
     unset($columns['tags']);
     unset($columns['wpseo-links']);
+    unset($columns['wpseo-linked']);
     unset($columns['description']);
     unset($columns['wpseo-score']);
     unset($columns['wpseo-title']);
