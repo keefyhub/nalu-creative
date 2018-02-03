@@ -71,6 +71,7 @@ function include_additional_files()
     require_once $template_url . '/includes/acf-options.php';
     require_once $template_url . '/includes/contact-form.php';
     require_once $template_url . '/includes/wordpress.php';
+    require_once $template_url . '/includes/yoast-seo.php';
     require_once $template_url . '/includes/tinymce/editor-customisation.php';
 }
 

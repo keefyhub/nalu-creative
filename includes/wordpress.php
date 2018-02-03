@@ -64,3 +64,11 @@ add_action('init', 'disable_comments_admin_bar');
 // Image sizes
 add_image_size('rectangle', 900, 600, true);
 add_image_size('square', 400, 400, true);
+
+// Remove `posts`
+function remove_admin_sub_menus()
+{
+    remove_menu_page('edit.php');
+}
+
+add_action('admin_menu', 'remove_admin_sub_menus', 999);
