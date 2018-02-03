@@ -1,5 +1,5 @@
     <?php $site_name = get_bloginfo('name'); ?>
-    <section class="site-footer">
+    <section class="site-footer will-animate fadeIn js-animate-when-visible">
         <div class="container">
             <footer class="site-footer__content">
                 <a class="company-logo" href="<?= site_url(); ?>">

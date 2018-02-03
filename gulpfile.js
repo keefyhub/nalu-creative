@@ -13,6 +13,7 @@ var gulp = require('gulp'),
             './scss/editor-style.scss'
         ],
         input_js: [
+            './node_modules/jquery-isonscreen/jquery.isonscreen.js',
             './node_modules/magnific-popup/dist/jquery.magnific-popup.js',
             './js/*.js'
         ],

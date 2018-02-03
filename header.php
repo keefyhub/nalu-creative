@@ -12,7 +12,7 @@
     document.getElementsByClassName('no-js')[0].classList.remove('no-js');
 </script>
     <main class="site-wrapper">
-        <section class="site-header site-header--mobile js-navigation-target"">
+        <section class="site-header site-header--mobile js-navigation-target will-animate fadeIn js-animate-when-visible"">
             <a class="company-logo" href="<?php echo site_url(); ?>">
                 <img alt="<?= get_bloginfo('name'); ?>" src="<?= PUBLIC_FOLDER; ?>/images/nalu-creative-logo.png">
             </a>
@@ -39,8 +39,8 @@
                 </ul>
             </nav>
         </section>
-        <section class="hero-banner" style="background-image: url('<?= PUBLIC_FOLDER; ?>/images/hero-banner.jpg')">
-            <video autoplay class="hero-banner__video" loop muted preload="auto">
+        <section class="hero-banner will-animate fadeIn js-animate-when-visible" style="background-image: url('<?= PUBLIC_FOLDER; ?>/images/hero-banner.jpg')" data-delay-animation=".5s">
+            <video class="hero-banner__video" loop muted preload="auto">
                 <source src="<?= PUBLIC_FOLDER; ?>/videos/banner.mov">
                 <source src="<?= PUBLIC_FOLDER; ?>/videos/banner.mp4">
             </video>
@@ -49,7 +49,7 @@
             </div>
         </section>
         <section class="site-header">
-            <nav class="sticky-menu">
+            <nav class="sticky-menu will-animate fadeIn js-animate-when-visible">
             <?php
             wp_nav_menu([
                 'menu' => 'Main Menu Left',
