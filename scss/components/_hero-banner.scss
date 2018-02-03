@@ -16,12 +16,14 @@
         top: 50%;
         transform: translate(-50%, -50%);
         width: auto;
+        z-index: 0;
     }
 
     &__content {
+        @include image-overlay($hero-banner-overlay-color);
         max-width: 40rem;
-        position: relative;
-        z-index: 5;
+        position: static;
+        z-index: 10;
 
         img {
             max-height: 30rem;

@@ -1,3 +1,32 @@
+@media only screen and (min-height: 600px) and (min-width: 769px) {
+    .hero-banner {
+        @include image-overlay($hero-banner-overlay-color);
+        max-height: calc(100vh - 5.5rem);
+        min-height: calc(100vh - 5.5rem);
+        padding: 8rem;
+
+        &__video {
+            position: absolute;
+            z-index: 0;
+        }
+
+        &__content {
+            @include absolute-center(absolute);
+            height: calc(100% - 10rem);
+            z-index: 10;
+
+            &::before {
+                display: none;
+            }
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .hero-banner {
         padding: 4rem;
