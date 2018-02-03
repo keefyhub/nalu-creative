@@ -72,3 +72,19 @@ function remove_admin_sub_menus()
 }
 
 add_action('admin_menu', 'remove_admin_sub_menus', 999);
+
+// Remove unwanted columns from admin screen
+function remove_columns_from_admin($columns)
+{
+    unset($columns['tags']);
+    unset($columns['wpseo-links']);
+    unset($columns['description']);
+    unset($columns['wpseo-score']);
+    unset($columns['wpseo-title']);
+    unset($columns['wpseo-metadesc']);
+    unset($columns['wpseo-focuskw']);
+    unset($columns['wpseo-score-readability']);
+    return $columns;
+}
+
+add_filter('manage_edit-page_columns', 'remove_columns_from_admin');
