@@ -1,4 +1,4 @@
-# Nalu Creative Wordpress Sites
+# Nalu Creative Wordpress Site
 
 ## Prerequisites
 - Must have `npm`, `mysql`, `wp-cli`, and `php` installed, recommend `php7`
@@ -24,6 +24,6 @@
 ## Recommended Plugins
 - WP Smush
 - Regenerate Thumbnails
-- Velvet Blues Update URLs (only required on Staging or Live sites)
-- Yoast SEO (free version)
-- iThemes Security (change wp-admin url, everything else is automatic)
+- Yoast SEO
+
+XML-RPC and the REST API has been disabled
