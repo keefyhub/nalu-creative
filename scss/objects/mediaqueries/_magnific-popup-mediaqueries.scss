@@ -16,12 +16,39 @@
 
 @media only screen and (max-width: 768px) {
     .mfp-container {
-        max-width: 100%;
         padding: 1rem;
     }
 
     .mfp-content .mfp-description {
         padding: 2rem;
+    }
+
+    .mfp-gallery {
+        .mfp-close {
+            left: 0;
+            top: -1.5rem;
+        }
+
+        .mfp-arrow {
+            &-left {
+                left: -1rem;
+            }
+
+            &-right {
+                right: -1.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .mfp-container {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .mfp-content .mfp-description {
+        padding: 2rem 1rem;
     }
 
     .mfp-gallery {
@@ -43,11 +70,5 @@
                 border-color: $body-color;
             }
         }
-    }
-}
-
-@media only screen and (max-width: 425px) {
-    .mfp-content .mfp-description {
-        padding: 2rem 1rem;
     }
 }
