@@ -5,6 +5,10 @@ define('DISALLOW_FILE_EDIT', true);
 // Disable XML-RPC
 add_filter('xmlrpc_enabled', '__return_false');
 
+// Disable admin bar on front end
+show_admin_bar(false);
+add_filter('show_admin_bar', '__return_false');
+
 // Close comments on the front-end
 function disable_comments_status()
 {
@@ -60,6 +64,15 @@ function disable_comments_admin_bar()
 }
 
 add_action('init', 'disable_comments_admin_bar');
+
+// Remove comments from admin menu bar
+function my_admin_bar_render()
+{
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('comments');
+}
+
+add_action('wp_before_admin_bar_render', 'my_admin_bar_render');
 
 // Image sizes
 add_image_size('rectangle', 900, 600, true);
