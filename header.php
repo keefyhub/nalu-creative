@@ -12,7 +12,7 @@
     document.getElementsByClassName('no-js')[0].classList.remove('no-js');
 </script>
     <main class="site-wrapper">
-        <section class="site-header site-header--mobile js-navigation-target will-animate fadeIn js-animate-when-visible"">
+        <section class="site-header site-header--mobile js-navigation-target will-animate fadeIn js-animate-when-visible">
             <a class="company-logo" href="<?php echo site_url(); ?>">
                 <img alt="<?= get_bloginfo('name'); ?>" src="<?= PUBLIC_FOLDER; ?>/images/nalu-creative-logo.png">
             </a>
