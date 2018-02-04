@@ -33,7 +33,9 @@
                         ?>
                         <li class="social__item">
                             <a class="social__link icon-<?= strtolower($social_account['type']); ?>"
-                               href="<?= $social_account['url']; ?>" target="_blank"></a>
+                               href="<?= $social_account['url']; ?>" target="_blank">
+                                <?= $social_account['type']; ?>
+                            </a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
