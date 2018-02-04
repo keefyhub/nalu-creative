@@ -106,7 +106,7 @@
     border: 2px solid red;
 }
 
-@mixin link-underline($color, $bottom: 0, $display: 'inline-block') {
+@mixin link-underline($color, $bottom: 0, $display: inline-block) {
     display: $display;
     position: relative;
     text-decoration: none;
