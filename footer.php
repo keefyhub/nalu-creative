@@ -8,7 +8,7 @@
                 <ul class="site-footer__menu">
                     <li class="site-footer__menu-item">&copy; <?= date('Y') . ' ' . $site_name; ?></li>
                     <li class="site-footer__menu-item">Designed by <?= $site_name; ?></li>
-                    <li class="site-footer__menu-item">Developed by <a href="//keithlight.co.uk" target="_blank">Keith Light</a></li>
+                    <li class="site-footer__menu-item">Developed by <a href="http://keithlight.co.uk" target="_blank">Keith Light</a></li>
                 </ul>
             </footer>
         </div>
