@@ -1,4 +1,6 @@
-<section class="contact page-content page-content--<?=$background_colour; ?> will-animate fadeIn js-animate-when-visible" id="contact">
+<section
+        class="contact page-content page-content--<?= $background_colour; ?> will-animate fadeIn js-animate-when-visible"
+        id="contact">
     <div class="contact__form container container--small">
         <article class="wysiwyg will-animate fadeIn js-animate-when-visible" data-delay-animation=".5s">
             <?= apply_filters('the_content', get_sub_field('content')); ?>
@@ -34,7 +36,9 @@
                         <li class="social__item">
                             <a class="social__link icon-<?= strtolower($social_account['type']); ?>"
                                href="<?= $social_account['url']; ?>" target="_blank">
-                                <?= $social_account['type']; ?>
+                                <span class="u-visually-hidden">
+                                    <?= $social_account['type']; ?>
+                                </span>
                             </a>
                         </li>
                     <?php endforeach; ?>
