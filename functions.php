@@ -40,9 +40,7 @@ function async_script_load($tag, $handle)
 {
     if (is_admin()) return $tag;
 
-    $excluded_scripts = [
-        'jquery-core'
-    ];
+    $excluded_scripts = [];
 
     if (!is_admin()) {
         if (in_array($handle, $excluded_scripts)) {
