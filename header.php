@@ -39,8 +39,8 @@
                 </ul>
             </nav>
         </section>
-        <section class="hero-banner will-animate fadeIn js-animate-when-visible" style="background-image: url('<?= PUBLIC_FOLDER; ?>/images/hero-banner.jpg')" data-delay-animation=".5s">
-            <video class="hero-banner__video" loop muted preload="auto">
+        <section class="hero-banner will-animate fadeIn js-animate-when-visible" style="background-image: url('<?= PUBLIC_FOLDER; ?>/images/poster.jpg')" data-delay-animation=".5s">
+            <video class="hero-banner__video" loop muted preload="auto" poster="<?= PUBLIC_FOLDER; ?>/images/poster.jpg">
                 <source src="<?= PUBLIC_FOLDER; ?>/videos/banner.mov">
                 <source src="<?= PUBLIC_FOLDER; ?>/videos/banner.mp4">
             </video>
