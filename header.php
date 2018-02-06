@@ -44,7 +44,7 @@
                 <source src="<?= PUBLIC_FOLDER; ?>/videos/banner.mov">
                 <source src="<?= PUBLIC_FOLDER; ?>/videos/banner.mp4">
             </video>
-            <div class="hero-banner__content">
+            <div class="hero-banner__content will-animate fadeIn js-animate-when-visible" data-delay-animation="1s">
                 <img src="<?= PUBLIC_FOLDER; ?>/images/nalu-creative-large-logo.png">
             </div>
         </section>

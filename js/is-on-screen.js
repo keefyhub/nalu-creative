@@ -38,5 +38,5 @@
 
     setTimeout(function () {
         $('.hero-banner__video').get(0).play();
-    }, 1500);
+    }, 2000);
 })(jQuery);
