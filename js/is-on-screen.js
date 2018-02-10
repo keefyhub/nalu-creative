@@ -10,8 +10,6 @@
             onScreenBreakPoint = 800,
             onScreen;
 
-        if (jsAnimateSelector.length < 1) return;
-
         jsAnimateSelector.each(function () {
             var delayAnimation = $(this).data('delay-animation'),
                 alreadyOnScreen = $(this).offset().top < $(window).scrollTop(),
@@ -32,8 +30,20 @@
         });
     }
 
+    function changeVideoPlayState() {
+        var onScreenOffsetX = 0.2,
+            onScreenOffsetY = 0.2;
+
+        if ($('.hero-banner__video').isOnScreen(onScreenOffsetX, onScreenOffsetY) && $('.hero-banner').is(':visible')) {
+            $('.hero-banner__video').get(0).play();
+        } else {
+            $('.hero-banner__video').get(0).pause();
+        }
+    }
+
     $(window).on('load resize scroll', function () {
         checkForElementsToAnimate();
+        changeVideoPlayState();
     });
 
     setTimeout(function () {
