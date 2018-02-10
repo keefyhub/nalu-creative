@@ -20,7 +20,6 @@
     }
 
     &__content {
-        @include image-overlay($hero-banner-overlay-color);
         max-width: 40rem;
         position: static;
         z-index: 10;

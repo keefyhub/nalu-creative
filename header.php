@@ -14,7 +14,7 @@
     <main class="site-wrapper">
         <section class="site-header site-header--mobile js-navigation-target will-animate fadeIn js-animate-when-visible">
             <a class="company-logo" href="<?php echo site_url(); ?>">
-                <img alt="<?= get_bloginfo('name'); ?>" src="<?= PUBLIC_FOLDER; ?>/images/nalu-creative-logo.png">
+                <img alt="<?= get_bloginfo('name'); ?> logo" src="<?= PUBLIC_FOLDER; ?>/images/nalu-creative-logo.png">
             </a>
             <a class="navigation-toggle js-navigation-toggle" href="#">
                 <span class="navigation-toggle__text">Menu</span>
@@ -41,11 +41,10 @@
         </section>
         <section class="hero-banner will-animate fadeIn js-animate-when-visible" style="background-image: url('<?= PUBLIC_FOLDER; ?>/images/poster.jpg')" data-delay-animation=".5s">
             <video class="hero-banner__video" loop muted preload="auto" poster="<?= PUBLIC_FOLDER; ?>/images/poster.jpg">
-                <source src="<?= PUBLIC_FOLDER; ?>/videos/banner.mov">
-                <source src="<?= PUBLIC_FOLDER; ?>/videos/banner.mp4">
+                <source src="<?= PUBLIC_FOLDER; ?>/videos/banner-with-overlay.mp4">
             </video>
             <div class="hero-banner__content will-animate fadeIn js-animate-when-visible" data-delay-animation="1s">
-                <img src="<?= PUBLIC_FOLDER; ?>/images/nalu-creative-large-logo.png">
+                <img alt="<?= get_bloginfo('name'); ?> logo" src="<?= PUBLIC_FOLDER; ?>/images/nalu-creative-large-logo.png">
             </div>
         </section>
         <section class="site-header">
@@ -60,7 +59,7 @@
             ?>
 
             <a class="company-logo" href="<?= site_url(); ?>">
-                <img alt="<?= get_bloginfo('name'); ?>" src="<?= PUBLIC_FOLDER; ?>/images/nalu-creative-logo.png">
+                <img alt="<?= get_bloginfo('name'); ?> logo" src="<?= PUBLIC_FOLDER; ?>/images/nalu-creative-logo.png">
             </a>
 
             <?php

@@ -1,6 +1,5 @@
 @media only screen and (min-height: 600px) and (min-width: 769px) {
     .hero-banner {
-        @include image-overlay($hero-banner-overlay-color);
         max-height: calc(100vh - 5.5rem);
         min-height: calc(100vh - 5.5rem);
         padding: 8rem;
