@@ -8,12 +8,14 @@
         display: flex;
         justify-content: center;
         min-height: 25rem;
+        overflow: hidden;
         padding: 3.75rem;
         position: relative;
 
         &::before {
-            transition: opacity $default-transition-timing;
             opacity: 0;
+            width: 102%;
+            transition: opacity $default-transition-timing;
         }
 
         &:hover {
