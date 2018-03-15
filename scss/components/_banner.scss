@@ -9,4 +9,8 @@
     &__content {
         max-width: 40rem;
     }
+
+    .title--with-underline::before {
+        width: 6rem;
+    }
 }
