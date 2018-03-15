@@ -1,3 +1,13 @@
+.contact__links {
+    .title {
+        font-size: 1.2rem;
+
+        &--with-underline::before {
+            width: 2rem;
+        }
+    }
+}
+
 .wpcf7-form {
     font-size: .9rem;
 
