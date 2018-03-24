@@ -46,6 +46,7 @@
     }
 
     .mfp-arrow {
+        @include vertical-center(absolute);
         height: 100%;
         margin: 0;
         transition: opacity $default-transition-timing;
@@ -89,4 +90,35 @@
             }
         }
     }
+
+    //.mfp-arrow {
+    //    @include vertical-center(absolute);
+    //    height: calc(100% - 80px);
+    //    margin: 0;
+    //    width: 100px;
+    //    will-change: opacity;
+    //
+    //    &::before {
+    //        @include absolute-center(absolute);
+    //        @include background-cover;
+    //        //background-image: url('./public/images/magnific-popup-arrow.png');
+    //        background-color: red;
+    //        border: 0;
+    //        height: 40px;
+    //        margin: 0;
+    //        width: 20px;
+    //    }
+    //
+    //    &::after {
+    //        display: none;
+    //    }
+    //
+    //    &:active {
+    //        margin: 0;
+    //    }
+    //
+    //    &-left::before {
+    //        transform: translate(-50%, -50%) rotate(180deg);
+    //    }
+    //}
 }
