@@ -74,6 +74,14 @@ function my_admin_bar_render()
 
 add_action('wp_before_admin_bar_render', 'my_admin_bar_render');
 
+// Remove items from customizer
+function remove_items_from_customizer($wp_customize)
+{
+    $wp_customize->remove_section('custom_css');
+}
+
+add_action('customize_register', 'remove_items_from_customizer', 15);
+
 // Image sizes
 add_image_size('rectangle', 900, 600, true);
 add_image_size('square', 400, 400, true);
