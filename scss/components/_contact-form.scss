@@ -70,6 +70,11 @@
     .wpcf7-not-valid-tip {
         display: none;
     }
+
+    .wpcf7-recaptcha {
+      transform: scale(.8);
+      transform-origin: 0 0;
+    }
 }
 
 .screen-reader-response {
